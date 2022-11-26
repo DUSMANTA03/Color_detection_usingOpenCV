@@ -1,0 +1,21 @@
+import cv2
+from matplotlib import pyplot as plt
+img1 = cv2.imread('demo3.jpg',0)
+print("Pixels values for image 1 is: ",img1)
+cv2.imshow('Grayscale Image', img1)
+#cv2.waitKey()
+histr = cv2.calcHist([img1],[0],None,[256],[0,256])
+plt.plot(histr)
+plt.show()
+'''img2 = cv2.imread('demo2.jpg',0)
+print("Pixels values for image 2 is: ",img2)
+cv2.imshow('Grayscale Image',img2)
+histr2 = cv2.calcHist([img2],[0],None,[256],[0,256])
+plt.plot(histr2)
+plt.show()
+img3 = cv2.imread('demo3.jpg',0)
+print("Pixels values for image 3 is: ",img3)
+cv2.imshow('Grayscale Image',img3)
+histr3 = cv2.calcHist([img3],[0],None,[256],[0,256])
+plt.plot(histr3)
+plt.show()'''
